@@ -1,0 +1,12 @@
+numpy>=1.23
+scipy>=1.9
+scikit-learn>=1.2
+torch>=2.0
+torchvision>=0.15
+opencv-python>=4.7
+Pillow>=9.4
+matplotlib>=3.6
+seaborn>=0.12
+umap-learn>=0.5
+tqdm>=4.65
+jupyter>=1.0
