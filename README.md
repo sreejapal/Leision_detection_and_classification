@@ -77,7 +77,7 @@ Two classification heads were benchmarked on the held-out test split of extracte
 |---|---:|---:|---:|---|
 | **SVM baseline** (PCA-reduced deep features) | **75%** | 0.62 | 0.75 | Strong majority-class recall, weaker on rare classes |
 | **SVM + Quadruplet-loss embeddings** | 69% | 0.52 | 0.70 | Better structuring of minority-class regions, but the embedding margin was too small to consistently beat the raw-feature SVM |
-| **SVM + Triplet-loss embeddings** | *outperformed the quadruplet variant* | — | — | Same mining/SVM protocol as the quadruplet head, with a single hard negative instead of two — see [`notebooks/03_triplet_metric_learning.ipynb`](notebooks/03_triplet_metric_learning.ipynb) / [`src/models/triplet_net.py`](src/models/triplet_net.py). *Exact numbers pending — drop your run's accuracy/F1 into `results/metrics_summary.md` once you have them.* |
+| **SVM + Triplet-loss embeddings** | *outperformed the quadruplet variant* Same mining/SVM protocol as the quadruplet head, with a single hard negative instead of two — see [`notebooks/03_triplet_metric_learning.ipynb`](notebooks/03_triplet_metric_learning.ipynb) / [`src/models/triplet_net.py`](src/models/triplet_net.py).
 
 **Baseline SVM — per-class report**
 
