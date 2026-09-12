@@ -1,0 +1,25 @@
+# Data & large artifacts
+data/raw/
+data/masked/
+*.npy
+*.npz
+
+# Model checkpoints
+*.pt
+*.pth
+checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
