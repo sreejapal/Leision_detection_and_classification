@@ -121,10 +121,6 @@ Dermoscopic Image (ISIC 2019)
 - **Class imbalance remains the dominant bottleneck** across all three models — rare classes (support < 200, e.g. classes 3, 5, 7) trail the majority classes by a wide F1 margin regardless of which classifier head is used, and no single approach here fully solves it.
 - Ranking by overall accuracy: **baseline SVM (75.6%) > triplet (69.2%) > quadruplet (56.7%)**. Ranking by minority-class recall tends to favor quadruplet on several classes — which head is "best" depends on whether overall accuracy or rare-class recall matters more for the use case.
 
-📄 Full write-up, literature review, and figures: [`docs/project_report.pdf`](docs/project_report.pdf) · 🖼️ Slide deck: [`docs/project_presentation.pptx`](docs/project_presentation.pptx)
-
----
-
 ## 📁 Repository Structure
 
 ```
