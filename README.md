@@ -8,10 +8,6 @@
 [![Dataset](https://img.shields.io/badge/Dataset-ISIC%202019-lightgrey)](https://challenge.isic-archive.com/data/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-> IVᵗʰ Semester Minor Project — Department of Data Science & Artificial Intelligence, IIIT Naya Raipur
-> **Authors:** Sreeja Pal, Patnana Jagan Mohan · **Supervisor:** Dr. Avantika Singh
-
----
 
 ## 📌 Overview
 
@@ -71,8 +67,6 @@ Dermoscopic Image (ISIC 2019)
 
 ## 📊 Results
 
-Three classification heads were benchmarked on the held-out test split of extracted ISIC 2019 features (8 classes, 5,067 test samples). Baseline and triplet numbers are from the final project report / presentation (`docs/project_report.pdf`, `docs/project_presentation.pptx`); quadruplet numbers are from a supplementary run.
-
 | Model | Accuracy | Macro F1 | Weighted F1 | Notes |
 |---|---:|---:|---:|---|
 | **SVM baseline** (PCA-reduced deep features) | **75.6%** | 0.62 | 0.75 | Strong majority-class recall, weaker on rare classes |
@@ -117,8 +111,6 @@ Three classification heads were benchmarked on the held-out test split of extrac
 | 5 | 0.19 | 0.40 | 0.25 | 48 |
 | 6 | 0.51 | 0.76 | 0.61 | 51 |
 | 7 | 0.17 | 0.43 | 0.24 | 126 |
-
-*(Class indices correspond to the 8 ISIC 2019 diagnostic categories used in this study — see [`docs/project_report.pdf`](docs/project_report.pdf) for the full mapping and class-distribution chart.)*
 
 ### Takeaways
 
