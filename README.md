@@ -144,9 +144,6 @@ Dermoscopic Image (ISIC 2019)
 ├── results/
 │   ├── results.json                # Raw classification report (baseline SVM run)
 │   └── metrics_summary.md
-├── docs/
-│   ├── project_report.pdf
-│   └── project_presentation.pptx
 ├── data/
 │   └── README.md                   # How to obtain / regenerate features.npy, labels.npy
 ├── requirements.txt
@@ -205,19 +202,6 @@ Two color-space masking strategies were evaluated to strip out surrounding skin 
 2. **Triplet-loss embedding network** (`src/models/triplet_net.py`) — an MLP trained with a hard/semi-hard-mining triplet loss (`d(a,p) + margin < d(a,n)`) to pull same-class embeddings together and push apart the nearest wrong-class sample, followed by an SVM on the learned embedding. **Result: 69.2% accuracy** — see [`notebooks/03_triplet_metric_learning.ipynb`](notebooks/03_triplet_metric_learning.ipynb).
 3. **Quadruplet-loss embedding network** (`src/models/quadruplet_net.py`) — extends the triplet setup with a second, unrelated negative (`d(a,p) < d(a,n1)` and `d(a,p) < d(p,n2)` margins) for a stronger separation constraint. **Result: 56.7% accuracy** — lower overall accuracy than both the baseline and triplet, though it lifts recall on several minority classes. See [`notebooks/01_quadruplet_metric_learning.ipynb`](notebooks/01_quadruplet_metric_learning.ipynb).
 4. **Low-rank class-imbalance decomposition** (`src/models/low_rank_decomposition.py`) — an experimental linear layer that decomposes each weight matrix into a shared "general" component (`θg`) and a low-rank "task-specific" correction (`θt = B·A`), trained with a sinusoidally-annealed discrepancy loss (`LMORE`) plus a supervised-contrastive term, to study how much of the network's capacity is being spent adapting to majority vs. minority classes.
-
----
-
-## 🛣️ Future Work
-
-- [ ] Re-tune the quadruplet margin/mining strategy — current setup trades too much overall accuracy for its minority-class recall gains
-- [ ] Data augmentation / synthetic minority oversampling for rare lesion classes
-- [ ] Meta-learning (e.g. few-shot adaptation) for classes with very few samples
-- [ ] Evaluate with balanced metrics (macro-F1, balanced accuracy) as the primary criterion instead of raw accuracy
-- [ ] End-to-end fine-tuning of the CNN backbones instead of frozen feature extraction
-- [ ] Fairness evaluation across Fitzpatrick skin-tone groups
-
----
 
 ## 📚 Dataset & References
 
